@@ -12,10 +12,7 @@ using namespace std;
 /// <returns>the encrypted string</returns>
 string encrypt(string message, string passcode) {
     int shift = passcode.length();
-    for (int i = 0; i < message.length(); i++)
-    {
-        message[i] += shift;
-    }
+    for (int i = 0; i < message.length(); i++) message[i] += shift;
     return message;
 }
 
@@ -27,10 +24,7 @@ string encrypt(string message, string passcode) {
 /// <returns>the unencrypted string</returns>
 string unencrypt(string message, string passcode) {
     int shift = passcode.length();
-    for (int i = 0; i < message.length(); i++)
-    {
-        message[i] -= shift;
-    }
+    for (int i = 0; i < message.length(); i++) message[i] -= shift;
     return message;
 }
 
@@ -42,8 +36,7 @@ int main()
     cin >> userselect;
     if (userselect == "E" || userselect == "e")
     {
-        string message;
-        string passcode;
+        string message, passcode;
         cout << "Please enter you message you wish to encrypt" << endl;
         cout << "Please instead of using space between words, use '-' or '_'" << endl;
         cin >> message;
@@ -58,8 +51,7 @@ int main()
     }
     else if (userselect == "U" || userselect == "u")
     {
-        string message;
-        string passcode;
+        string message, passcode;
         cout << "Please enter you message you wish to unencrypt" << endl;
         cin >> message;
         cout << "Please enter the encryption password" << endl;
@@ -72,6 +64,5 @@ int main()
     else
     {
         cout << "Wrong Input" << endl;
-        cout << "Exiting Encryptor.exe" << endl;
     }
 }
