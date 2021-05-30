@@ -56,13 +56,10 @@ int main()
         cin >> message;
         cout << "Please enter the encryption password" << endl;
         cin >> passcode;
-        string encrypted_message = unencrypt(message, passcode);
+        string unencrypted_message = unencrypt(message, passcode);
         cout << "The unencrypted message is:" << endl;
-        cout << encrypted_message << endl;
+        cout << unencrypted_message << endl;
         cout << "*This message was unencrypted using Damian's Encryptor.exe*" << endl;
     }
-    else
-    {
-        cout << "Wrong Input" << endl;
-    }
+    else cout << "Wrong Input" << endl;
 }
